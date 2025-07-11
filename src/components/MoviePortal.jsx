@@ -3,19 +3,23 @@ import { fetchMovies } from "../Api/fetchMovies";
 import { ErrorAlert } from "./ErrorAlert";
 import { MovieDetail } from "./MovieDetail";
 
-export const MoviePortal = ({apiKey}) => {
+export const MoviePortal = ({ apiKey }) => {
   const [searchInputText, setSearchInputText] = useState("");
   const [enteredSearchText, setEnteredSearchText] = useState("");
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  console.log(apiKey);
+
   const onSearchTextEnter = (e) => {
     e.preventDefault();
     setEnteredSearchText(searchInputText);
     setLoading(true);
 
-    fetchMovies(apiKey, searchInputText, setMovies, setError, () => setLoading(false));
+    fetchMovies(apiKey, searchInputText, setMovies, setError, () =>
+      setLoading(false)
+    );
   };
 
   return (
@@ -53,14 +57,16 @@ export const MoviePortal = ({apiKey}) => {
       {/* Welcome Message */}
       {!enteredSearchText && !error && movies.length === 0 && !loading && (
         <p className="text-white mt-4 fs-5 text-center">
-          👋 Welcome to <strong>Movie Snap</strong>! Start by typing a movie name above.
+          👋 Welcome to <strong>Movie Snap</strong>! Start by typing a movie
+          name above.
         </p>
       )}
 
       {/* Result Count */}
       {movies.length > 0 && !loading && (
         <p className="text-white mt-3">
-          Showing {movies.length} movies for "<strong>{enteredSearchText}</strong>"
+          Showing {movies.length} movies for "
+          <strong>{enteredSearchText}</strong>"
         </p>
       )}
 
