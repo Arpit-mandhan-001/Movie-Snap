@@ -3,7 +3,7 @@ import { Header } from "./components/Header";
 import { MoviePortal } from "./components/MoviePortal";
 
 const App = () => {
-  const apiKey = import.meta.env.VITE_MOVIESNAP_APIKEY;
+  const apiKey = "e88be6ca";
   return (
     <Router>
       <Header />
