@@ -3,7 +3,7 @@ import { fetchMovies } from "../Api/fetchMovies";
 import { ErrorAlert } from "./ErrorAlert";
 import { MovieDetail } from "./MovieDetail";
 
-export const MoviePortal = () => {
+export const MoviePortal = ({apiKey}) => {
   const [searchInputText, setSearchInputText] = useState("");
   const [enteredSearchText, setEnteredSearchText] = useState("");
   const [movies, setMovies] = useState([]);
@@ -15,7 +15,7 @@ export const MoviePortal = () => {
     setEnteredSearchText(searchInputText);
     setLoading(true);
 
-    fetchMovies(searchInputText, setMovies, setError, () => setLoading(false));
+    fetchMovies(apiKey, searchInputText, setMovies, setError, () => setLoading(false));
   };
 
   return (

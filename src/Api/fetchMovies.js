@@ -1,6 +1,7 @@
-const API_KEY = "e88be6ca";
+// const API_KEY = "";
 
 export const fetchMovies = async (
+  apiKey,
   searchText,
   moviesCallback,
   errorCallback,
@@ -8,13 +9,13 @@ export const fetchMovies = async (
 ) => {
   try {
     const response = await fetch(
-      `https://www.omdbapi.com/?s=${searchText}&apikey=${API_KEY}`
+      `https://www.omdbapi.com/?s=${searchText}&apikey=${apiKey}`
     );
     const data = await response.json();
 
     if (data.Response === "True") {
       const movieDetailsPromises = data.Search.map((movie) =>
-        fetchMovieDetails(movie.imdbID, errorCallback)
+        fetchMovieDetails(movie.imdbID, apiKey, errorCallback)
       );
       const movieDetails = await Promise.all(movieDetailsPromises);
       const validMovies = movieDetails.filter(Boolean);
@@ -36,10 +37,10 @@ export const fetchMovies = async (
   }
 };
 
-const fetchMovieDetails = async (id, errorCallback) => {
+const fetchMovieDetails = async (id, apiKey, errorCallback) => {
   try {
     const response = await fetch(
-      `https://www.omdbapi.com/?i=${id}&plot=full&apikey=${API_KEY}`
+      `https://www.omdbapi.com/?i=${id}&plot=full&apikey=${apiKey}`
     );
     const data = await response.json();
 
