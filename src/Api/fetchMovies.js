@@ -20,7 +20,6 @@ export const fetchMovies = async (
       const movieDetails = await Promise.all(movieDetailsPromises);
       const validMovies = movieDetails.filter(Boolean);
 
-      console.log("✔ Valid movies:", validMovies);
       moviesCallback(validMovies);
       errorCallback(null);
     } else {

@@ -46,7 +46,6 @@ export const MoviePortal = ({apiKey}) => {
         </div>
       )}
 
-      {/* Error Alert */}
       {error && (
         <ErrorAlert error={error} enteredSearchText={enteredSearchText} />
       )}
