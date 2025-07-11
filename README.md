@@ -14,8 +14,7 @@ Movie Snap is a responsive React web app that allows users to search for movies 
 * 📱 Responsive UI using Bootstrap
 
 ## 🧪 Live Demo
-
-Coming soon (or deploy via Netlify, Vercel, etc.)
+https://movie-snap-ten.vercel.app/
 
 ## 🖼 Preview
 
