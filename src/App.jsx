@@ -3,13 +3,12 @@ import { Header } from "./components/Header";
 import { MoviePortal } from "./components/MoviePortal";
 
 const App = () => {
-  const apiKey = "e88be6ca";
   return (
     <Router>
       <Header />
       <div className="container mt-4">
         <Routes>
-          <Route path="/" element={<MoviePortal apiKey={apiKey} />} />
+          <Route path="/" element={<MoviePortal />} />
         </Routes>
       </div>
     </Router>

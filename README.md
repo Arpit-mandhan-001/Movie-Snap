@@ -5,7 +5,7 @@ Movie Snap is a responsive React web app that allows users to search for movies 
 
 
 
-## 🚀 Features
+##  Features
 
 * 🔍 Search movies by title
 * 🎞 View full movie details
@@ -13,15 +13,15 @@ Movie Snap is a responsive React web app that allows users to search for movies 
 * 🔄 Loading spinner while fetching data
 * 📱 Responsive UI using Bootstrap
 
-## 🧪 Live Demo
+##  Live Demo
 https://movie-snap-ten.vercel.app/
 
-## 🖼 Preview
+## Preview
 
 ![Movie Snap Preview](./public/MovieSnap.png)
 
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 * [React](https://reactjs.org/)
 * [React Router](https://reactrouter.com/)
@@ -31,7 +31,7 @@ https://movie-snap-ten.vercel.app/
 
 
 
-## ⚙️ Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
@@ -70,7 +70,7 @@ The app will open in your default browser at [http://localhost:3000](http://loca
 
 ---
 
-## 📦 Production Build
+##  Production Build
 
 To build the app for production:
 
@@ -93,7 +93,7 @@ Since this is a frontend app, your API key **cannot be completely hidden**. To k
 
 
 
-## 🙌 Acknowledgments
+##  Acknowledgments
 
 * [OMDb API](http://www.omdbapi.com/) for movie data
 * [Bootstrap]() and [tailwind](https://getbootstrap.com/) for UI components

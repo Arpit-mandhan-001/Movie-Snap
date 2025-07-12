@@ -3,21 +3,19 @@ import { fetchMovies } from "../Api/fetchMovies";
 import { ErrorAlert } from "./ErrorAlert";
 import { MovieDetail } from "./MovieDetail";
 
-export const MoviePortal = ({ apiKey }) => {
+export const MoviePortal = () => {
   const [searchInputText, setSearchInputText] = useState("");
   const [enteredSearchText, setEnteredSearchText] = useState("");
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  console.log(apiKey);
-
   const onSearchTextEnter = (e) => {
     e.preventDefault();
     setEnteredSearchText(searchInputText);
     setLoading(true);
 
-    fetchMovies(apiKey, searchInputText, setMovies, setError, () =>
+    fetchMovies("e88be6ca", searchInputText, setMovies, setError, () =>
       setLoading(false)
     );
   };

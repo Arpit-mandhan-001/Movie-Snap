@@ -1,4 +1,3 @@
-// const API_KEY = "";
 
 export const fetchMovies = async (
   apiKey,
